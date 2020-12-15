@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+apt-get update -q
+apt-get install -qy libudunits2-dev libgdal-dev libgeos-dev libproj-dev
+
+# reduce the image size by removing unnecessary Apt files
+apt-get autoclean
